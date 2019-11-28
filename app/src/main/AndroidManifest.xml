@@ -21,7 +21,7 @@
 <!--        </activity>-->
 
         <activity
-            android:name=".RegisterActivity">
+            android:name=".ProductReceiptActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,12 +29,19 @@
             </intent-filter>
         </activity>
 
-<!--        <activity android:name=".RegisterActivity">-->
-<!--        </activity>-->
+        <activity android:name=".RegisterActivity">
+        </activity>
 
 
 <!--        <activity android:name=".HomeActivity">-->
 <!--        </activity>-->
+
+<!--        <activity android:name=".ProductReceiptActivity">-->
+<!--        </activity>-->
+
+        <activity android:name=".ProductDeliveryActivity">
+        </activity>
+
 
 
     </application>
