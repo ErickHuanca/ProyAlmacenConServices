@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
         pNombre = findViewById(R.id.etName);
         pEtCorreo = findViewById(R.id.etEmail);
         pEtContrasenia = findViewById(R.id.etPassword);
-        pBtnOjoVisible = findViewById(R.id.btnEye);
+        pBtnOjoVisible = findViewById(R.id.btnEyeSignIn);
         pBtnRegistrar = (Button) findViewById(R.id.btnRegister);
 
         ocultarMostrarPass();
@@ -56,7 +56,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void ocultarMostrarPass(){
-        pBtnOjoVisible = (Button) findViewById(R.id.btnEyeSignIn);
         pBtnOjoVisible.setOnTouchListener(
                 new View.OnTouchListener() {
                     @Override

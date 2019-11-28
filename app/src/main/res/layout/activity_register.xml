@@ -51,7 +51,7 @@
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/btnEye"
+            android:id="@+id/btnEyeSignIn"
             android:layout_gravity="center"
             android:layout_width="30dp"
             android:layout_height="30dp"
