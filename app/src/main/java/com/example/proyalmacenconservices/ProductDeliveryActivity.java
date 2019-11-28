@@ -133,7 +133,7 @@ public class ProductDeliveryActivity extends AppCompatActivity {
                 pTvMuestraUMedida.setText(""+datoMuestraUnid);
 //            actualizacionCantidad(producto, nCantidad);
 
-                Toast toastProduct = Toast.makeText(ProductDeliveryActivity.this,"Entrega satisfactorio, puede agregar otro.",Toast.LENGTH_LONG);
+                Toast toastProduct = Toast.makeText(ProductDeliveryActivity.this,"Entrega satisfactorio, puede entregar otro.",Toast.LENGTH_LONG);
                 toastProduct.setGravity(Gravity.CENTER, 0,0 );
                 toastProduct.show();
 
