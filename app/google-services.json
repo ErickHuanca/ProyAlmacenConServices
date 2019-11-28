@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "475200499145",
+    "firebase_url": "https://proy-almacen-con-services.firebaseio.com",
+    "project_id": "proy-almacen-con-services",
+    "storage_bucket": "proy-almacen-con-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475200499145:android:78658c634c1246bbfa4c18",
+        "android_client_info": {
+          "package_name": "com.example.proyalmacenconservices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475200499145-uduk39ngj4ma4k0q8flgnvhcoc7hfhn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyalmacenconservices",
+            "certificate_hash": "727b4c2e5b3e7606a7766dbd3add3e2b05e6b8ed"
+          }
+        },
+        {
+          "client_id": "475200499145-k816nhbkslnmd5rm9nvqr0s50rt4tll7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW7lloXDy7TZCAGtAv5AvxwWi86D_RqXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475200499145-k816nhbkslnmd5rm9nvqr0s50rt4tll7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
