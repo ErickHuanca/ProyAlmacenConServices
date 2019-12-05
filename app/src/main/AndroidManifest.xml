@@ -21,7 +21,7 @@
 <!--        </activity>-->
 
         <activity
-            android:name=".ProductDeliveryActivity">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,8 +39,8 @@
         <activity android:name=".ProductReceiptActivity">
         </activity>
 
-<!--        <activity android:name=".ProductDeliveryActivity">-->
-<!--        </activity>-->
+        <activity android:name=".ProductDeliveryActivity">
+        </activity>
 
 
 
