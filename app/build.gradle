@@ -37,11 +37,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.github.florent37:materialtextfield:1.0.7' //para iniciar secion
-    implementation 'com.google.android.material:material:1.0.0' //para registrarse
-
-//    implementation 'com.android.support:appcompact-v7:28.0.0'
-//    implementation 'com.android.support:design-v7:28.0.0'
-//    implementation 'com.android.support:support-v4:28.0.0'
 }
 apply plugin: 'com.google.gms.google-services'
