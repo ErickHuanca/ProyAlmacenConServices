@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -186,5 +187,25 @@ public class HomeActivity extends AppCompatActivity {
     public void sendProduct (View vista){
         startActivity(new Intent(HomeActivity.this, ProductDeliveryActivity.class));
 //        finish();
+    }
+
+    public void btnAzucar(View vista){
+
+//        final String detalle="";
+//        String optProduct[] = {"Azucar", "Harina de trigo", "Arroz", "Fideos", "Picota de mango", "Pala con mango", "Kit de cocina", "Kit de limpieza", "Kit de higiene", "Otros"};
+//        dbProd = FirebaseDatabase.getInstance().getReference("Products").child(optProduct[0]);
+//        dbProd.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+////                pTvQuantity1.setText("" + dataSnapshot.getValue().toString());
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//            }
+//
+//        });
+//        Toast.makeText(HomeActivity.this,"mensaje"+dataSnapshot.getValue().toString(),Toast.LENGTH_LONG).show();
     }
 }
