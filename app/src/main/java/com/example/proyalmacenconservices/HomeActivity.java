@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class HomeActivity extends AppCompatActivity {
@@ -189,23 +190,32 @@ public class HomeActivity extends AppCompatActivity {
 //        finish();
     }
 
-    public void btnAzucar(View vista){
 
-//        final String detalle="";
-//        String optProduct[] = {"Azucar", "Harina de trigo", "Arroz", "Fideos", "Picota de mango", "Pala con mango", "Kit de cocina", "Kit de limpieza", "Kit de higiene", "Otros"};
-//        dbProd = FirebaseDatabase.getInstance().getReference("Products").child(optProduct[0]);
-//        dbProd.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-////                pTvQuantity1.setText("" + dataSnapshot.getValue().toString());
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//            }
-//
-//        });
-//        Toast.makeText(HomeActivity.this,"mensaje"+dataSnapshot.getValue().toString(),Toast.LENGTH_LONG).show();
+    public void btnAzucar(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+
+        //este es una peticion query de productos con el id de usuario
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot issue : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        mensaje = mensaje + issue.child("product").getValue().toString()+" "+issue.child("quantity").getValue().toString()+"\n";
+
+                    }
+                    Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG).show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
     }
 }
