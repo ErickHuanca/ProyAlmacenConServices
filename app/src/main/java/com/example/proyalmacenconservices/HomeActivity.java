@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class HomeActivity extends AppCompatActivity {
@@ -186,5 +188,34 @@ public class HomeActivity extends AppCompatActivity {
     public void sendProduct (View vista){
         startActivity(new Intent(HomeActivity.this, ProductDeliveryActivity.class));
 //        finish();
+    }
+
+
+    public void btnAzucar(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+
+        //este es una peticion query de productos con el id de usuario
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot issue : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        mensaje = mensaje + issue.child("product").getValue().toString()+" "+issue.child("quantity").getValue().toString()+"\n";
+
+                    }
+                    Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG).show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
     }
 }

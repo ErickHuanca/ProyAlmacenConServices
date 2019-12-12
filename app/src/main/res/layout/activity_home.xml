@@ -14,7 +14,7 @@
 
 
         <LinearLayout
-            android:layout_width="240dp"
+            android:layout_width="241dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -137,6 +137,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="14750" />
+
+        <Button
+            android:id="@+id/btnAzucar"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:onClick="btnAzucar"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -167,6 +175,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="12300" />
+        <Button
+            android:id="@+id/btnHarina"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -197,14 +211,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="12300" />
+        <Button
+            android:id="@+id/btnArroz"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/tvValueSection4"
@@ -226,7 +245,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="8938" />
+            android:text="8938"/>
+        <Button
+            android:id="@+id/btnFideos"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -257,6 +282,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="506" />
+        <Button
+            android:id="@+id/btnPicota"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -287,6 +318,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="360" />
+        <Button
+            android:id="@+id/btnPala"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -317,6 +354,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="2522" />
+        <Button
+            android:id="@+id/btnKitsCocina"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -347,6 +390,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="2223" />
+        <Button
+            android:id="@+id/btnKitsLimpieza"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -377,6 +426,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="2223" />
+        <Button
+            android:id="@+id/btnHigiene"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
     <LinearLayout
@@ -407,6 +462,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="12" />
+        <Button
+            android:id="@+id/btnOtros"
+            android:layout_width="12dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:text="Det" />
     </LinearLayout>
 
 </LinearLayout>
