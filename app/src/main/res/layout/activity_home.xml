@@ -78,396 +78,430 @@
             android:text="Entrega de  Producto" />
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp">
 
-        <TextView
-            android:id="@+id/tvNameProduct"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Seccion"
-            android:textColor="#0025FF" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvNameCantidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cantidad"
-            android:textColor="#0028FF" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-        <TextView
-            android:id="@+id/tvNameCapacidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Capacidad"
-            android:textColor="#0029FF" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvNameProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Seccion"
+                    android:textColor="#0025FF" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvNameCantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantidad"
+                    android:textColor="#0028FF" />
 
-        <TextView
-            android:id="@+id/tvValueSection1"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Azucar" />
+                <TextView
+                    android:id="@+id/tvNameCapacidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Capacidad"
+                    android:textColor="#0029FF" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="14750" />
+                <TextView
+                    android:id="@+id/tvValueSection1"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Azucar" />
 
-        <Button
-            android:id="@+id/btnAzucar"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:onClick="btnAzucar"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueQuantity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueCapacity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="14750" />
 
-        <TextView
-            android:id="@+id/tvValueSection2"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Harina de trigo" />
+                <Button
+                    android:id="@+id/btnAzucar"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:onClick="btnAzucar"
+                    android:text="Det" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12300" />
-        <Button
-            android:id="@+id/btnHarina"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection2"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Harina de trigo" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection3"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Arroz" />
+                <TextView
+                    android:id="@+id/tvValueCapacity2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12300" />
+                <Button
+                    android:id="@+id/btnHarina"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnHarina"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12300" />
-        <Button
-            android:id="@+id/btnArroz"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection3"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Arroz" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp">
+                <TextView
+                    android:id="@+id/tvValueQuantity3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection4"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Fideos" />
+                <TextView
+                    android:id="@+id/tvValueCapacity3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12300" />
+                <Button
+                    android:id="@+id/btnArroz"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnArroz"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp">
 
-        <TextView
-            android:id="@+id/tvValueCapacity4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="8938"/>
-        <Button
-            android:id="@+id/btnFideos"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection4"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fideos" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection5"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Picotaca con Mango" />
+                <TextView
+                    android:id="@+id/tvValueCapacity4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="8938"/>
+                <Button
+                    android:id="@+id/btnFideos"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnFideos"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp">
 
-        <TextView
-            android:id="@+id/tvValueCapacity5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="506" />
-        <Button
-            android:id="@+id/btnPicota"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection5"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Picotaca con Mango" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection6"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Pala con mango" />
+                <TextView
+                    android:id="@+id/tvValueCapacity5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="506" />
+                <Button
+                    android:id="@+id/btnPicota"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnPicota"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="360" />
-        <Button
-            android:id="@+id/btnPala"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection6"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pala con mango" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection7"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Kits de cocina" />
+                <TextView
+                    android:id="@+id/tvValueCapacity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="360" />
+                <Button
+                    android:id="@+id/btnPala"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnPala"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2522" />
-        <Button
-            android:id="@+id/btnKitsCocina"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection7"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kits de cocina" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection8"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Kits de limpieza" />
+                <TextView
+                    android:id="@+id/tvValueCapacity7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2522" />
+                <Button
+                    android:id="@+id/btnKitsCocina"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnCocina"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2223" />
-        <Button
-            android:id="@+id/btnKitsLimpieza"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection8"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kits de limpieza" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection9"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Higiene" />
+                <TextView
+                    android:id="@+id/tvValueCapacity8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2223" />
+                <Button
+                    android:id="@+id/btnKitsLimpieza"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnLimpieza"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2223" />
-        <Button
-            android:id="@+id/btnHigiene"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection9"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Higiene" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="0dp"
-        >
+                <TextView
+                    android:id="@+id/tvValueQuantity9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
 
-        <TextView
-            android:id="@+id/tvValueSection10"
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Otros" />
+                <TextView
+                    android:id="@+id/tvValueCapacity9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2223" />
+                <Button
+                    android:id="@+id/btnHigiene"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnHigiene"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvValueQuantity10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                >
 
-        <TextView
-            android:id="@+id/tvValueCapacity10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12" />
-        <Button
-            android:id="@+id/btnOtros"
-            android:layout_width="12dp"
-            android:layout_height="40dp"
-            android:layout_weight="0.5"
-            android:text="Det" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvValueSection10"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Otros" />
+
+                <TextView
+                    android:id="@+id/tvValueQuantity10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvValueCapacity10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12" />
+                <Button
+                    android:id="@+id/btnOtros"
+                    android:layout_width="12dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:text="Det"
+                    android:onClick="btnOtros"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historial General"
+                android:onClick="btnHistoriaGral"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </LinearLayout>

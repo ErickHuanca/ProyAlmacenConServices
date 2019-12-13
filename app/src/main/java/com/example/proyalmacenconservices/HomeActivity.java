@@ -2,6 +2,7 @@ package com.example.proyalmacenconservices;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -179,7 +180,6 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-
     public void saveProduct (View vista){
         startActivity(new Intent(HomeActivity.this, ProductReceiptActivity.class));
 //        finish();
@@ -190,32 +190,351 @@ public class HomeActivity extends AppCompatActivity {
 //        finish();
     }
 
-
     public void btnAzucar(View vista){
         String idUser = auth.getCurrentUser().getUid();
-
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-
-
-        //este es una peticion query de productos con el id de usuario
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
         Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String mensaje = "";
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
                 if (dataSnapshot.exists()) {
                     // dataSnapshot is the "issue" node with all children with id 0
-                    for (DataSnapshot issue : dataSnapshot.getChildren()) {
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
                         // do something with the individual "issues"
-                        mensaje = mensaje + issue.child("product").getValue().toString()+" "+issue.child("quantity").getValue().toString()+"\n";
-
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Azucar")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
                     }
-                    Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG).show();
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
                 }
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+        //        String idUser = auth.getCurrentUser().getUid();
+//
+//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+//
+//        //este es una peticion query de productos con el id de usuario
+//        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+//        query.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                String mensaje = "";
+//                if (dataSnapshot.exists()) {
+//                    // dataSnapshot is the "issue" node with all children with id 0
+//                    for (DataSnapshot issue : dataSnapshot.getChildren()) {
+//                        // do something with the individual "issues"
+//                        mensaje = mensaje + issue.child("product").getValue().toString()+" "+issue.child("quantity").getValue().toString()+"\n";
+//
+//                    }
+//                    Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG).show();
+//                }
+//            }
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//            }
+//        });
+    }
+
+    public void btnHarina(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Harina de trigo")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnArroz(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Arroz")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnFideos(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Fideos")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnPicota(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Picota de mango")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnPala(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Pala con mango")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnCocina(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Kit de cocina")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnLimpieza(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Kit de limpieza")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnHigiene(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Kit de higiene")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnOtros(View vista){
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //este es una peticion query de productos con el id de usuario y producto especificco en la pantalla home boton DET
+        Query query = reference.child("Products").orderByChild("iduser").equalTo(idUser);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String mensaje = "Producto  Cantidad    FechaIngreso\n";
+                if (dataSnapshot.exists()) {
+                    // dataSnapshot is the "issue" node with all children with id 0
+                    for (DataSnapshot dbUser : dataSnapshot.getChildren()) {
+                        // do something with the individual "issues"
+                        String x = dbUser.child("product").getValue().toString();
+                        if (x.equals("Otros")){
+                            mensaje = mensaje +
+                                    dbUser.child("product").getValue().toString()+"         "+
+                                    dbUser.child("quantity").getValue().toString()+"        "+
+                                    dbUser.child("date").getValue().toString()+"\n";
+                        }
+                    }
+                    Toast toast = Toast.makeText(HomeActivity.this,mensaje, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    public void btnHistoriaGral(View v){
+        startActivity(new Intent(HomeActivity.this, DetalleActivity.class));
     }
 }
