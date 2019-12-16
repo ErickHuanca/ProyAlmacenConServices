@@ -42,7 +42,8 @@ public class DetalleActivity extends AppCompatActivity {
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String mensaje = "Emisor    Producto    Cantidad    Ingreso    HoraIngreso \n";
+                String mensaje = "HISTORIAL RECIBIDOS \n";
+                mensaje = mensaje + "Emisor    Producto    Cantidad    Ingreso    HoraIngreso \n";
                 if (dataSnapshot.exists()) {
                     // dataSnapshot is the "issue" node with all children with id 0
                     for (DataSnapshot issue : dataSnapshot.getChildren()) {

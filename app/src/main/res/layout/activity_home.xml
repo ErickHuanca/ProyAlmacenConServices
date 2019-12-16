@@ -497,6 +497,10 @@
                 android:layout_height="wrap_content"
                 android:text="Historial General"
                 android:onClick="btnHistoriaGral"/>
+            <TextView
+                android:id="@+id/tvTemporal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
         </LinearLayout>
